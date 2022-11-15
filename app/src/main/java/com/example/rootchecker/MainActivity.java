@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
         RootBeer rootBeer = new RootBeer(this);
-        if (rootBeer.isRooted()) {
+        if (rootBeer.isRooted() && rootBeer.isRootedWithBusyBoxCheck()) {
             //we found indication of root
             showRootedDialog(this);
         } else {
